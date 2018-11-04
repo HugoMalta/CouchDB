@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CouchDB</name>
+    </assembly>
+    <members>
+        <member name="M:CouchDB.Controllers.ValuesController.Get">
+            <summary>
+            Obter lista de documentos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CouchDB.Controllers.ValuesController.Get(System.String)">
+            <summary>
+            Obter um documento.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CouchDB.Controllers.ValuesController.Post(CouchDB.Model.Pessoa)">
+            <summary>
+            Inserir documento
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CouchDB.Controllers.ValuesController.Put(CouchDB.Model.Pessoa)">
+            <summary>
+            Alterar documento
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CouchDB.Controllers.ValuesController.Delete(System.String,System.String)">
+            <summary>
+            Remover documentos
+            </summary>
+            <param name="_id"></param>
+            <param name="_rev"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CouchDB.Dados.CouchDBDados`1">
+            <summary>
+            CouchDBDados
+            </summary>
+            <typeparam name="TType"></typeparam>
+        </member>
+        <member name="M:CouchDB.Dados.CouchDBDados`1.#ctor">
+            <summary>
+            construtor padrão
+            </summary>
+        </member>
+        <member name="M:CouchDB.Dados.CouchDBDados`1.#ctor(System.String,System.String)">
+            <summary>
+            construtor com dados de conexão.
+            </summary>
+            <param name="connectionstring"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:CouchDB.Dados.CouchDBDados`1.GetAsync(System.String[])">
+            <summary>
+            obter todos os registros de tipo TType no banco de dados
+            </summary>
+            <param name="camposSelect"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
