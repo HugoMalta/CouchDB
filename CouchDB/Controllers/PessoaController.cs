@@ -8,9 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CouchDB.Controllers
 {
+    /// <summary>
+    /// PessoaController
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class PessoaController : ControllerBase
     {
         private readonly string ConnectionString = "http://admin:admin@localhost:5984";
         private readonly string DataBaseName = "pessoa";
@@ -26,7 +29,6 @@ namespace CouchDB.Controllers
             Task<JsonResult> tese = a.GetAsync(new string[] { "_id", "_rev", "Nome", "CPF", "Idade" });
             Task.WaitAll(tese);
             return new JsonResult(tese.Result);
-            //return new string[] { "value1", "value2" };
         }
 
         /// <summary>
